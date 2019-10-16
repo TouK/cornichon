@@ -79,9 +79,9 @@ lazy val publishingSettings = Seq(
   pomIncludeRepository := (_ => false),
   publishTo := Some(
     if (version.value.trim.endsWith("SNAPSHOT"))
-      "snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
+      "snapshots" at "https://nexus.touk.pl/nexus/content/repositories/snapshot"
     else
-      "releases" at "https://oss.sonatype.org/service/local/staging/deploy/maven2")
+      "releases" at "https://nexus.touk.pl/nexus/content/repositories/releases")
 )
 
 lazy val commonSettings = standardSettings ++ publishingSettings
